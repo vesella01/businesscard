@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+/** Desktop styles **/
+/* Universal styles */
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("https://i.ibb.co/jwd4kgg/photo-1555066932-e78dd8fb77bb.jpg");
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    font-family: monospace;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 1.8rem;
+}
+
+/* Navigation styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    background-image: linear-gradient(#222, #000, #000);
+    width: 100vw;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 15px;
+    margin-right: 2vw;
+    color: grey;
+    text-decoration: none;
+}
+
+#navbar ul li a.active {
+    color: pink;
+}
+
+/* Welcome screen styles */
+#welcome-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    font-size: 2rem;
+    margin: -15vh 5vw 10vh 5vw;
+    font-family: 'Bitter', serif;
+    font-variant: small-caps;
+    cursor: default;
+}
+
+/* About me section styles */
+.aboutBox {
+    min-height: 100vh;
+    padding: 5vw;
+    color: pink;
+    background-image: linear-gradient(#999, #888, #777, #111, #111);
+}
+
+#myPicture {
+    width: 33vw;
+    float: right;
+    border-radius: 10px;
+    margin-left: 5vw;
+}
+
+.aboutBox p {
+    text-align: justify;
+}
+
+/* Portfolio section styles */
+.portfoliBox {
+    min-height: 100vh;
+    padding: 5vw;
+    color: white;
+    background-image: linear-gradient(#222, #222, #222, #222, #333);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container .project-tile a img {
+    border-radius: 10px 10px 0 0;
+    width: 40vw;
+    height: 33vh;
+}
+
+.container .project-tile p {
+    text-align: center;
+    margin: -1.5vh 0 5vh 0;
+    background-color: white;
+    color: black;
+    padding: 1vh 0;
+}
+
+.container #last-item {
+    visibility: hidden;
+}
+
+/* Contact section styles */
+.contactBox {
+    min-height: 100vh;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5vw;
+    color: white;
+    background-color: #111;
+}
+
+.contactBox p {
+    margin-top: 15vh;
+    font-size: 1.25rem;
+}
+
+.contactBox .links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contactBox #profile-link, .contactBox .logo {
+    text-decoration: none;
+    color: white;
+    border: 2px solid orange;
+    padding: 10px;
+}
+
+.contactBox #profile-link:hover, .contactBox .logo:hover {
+    background-color: pink;
+}
+
+/* Footer styles */
+footer {
+    background-image: linear-gradient(#222, #333, #111);
+    color: pink;
+    text-align: center;
+    padding: 1vh 0;
+    font-size: 0.75rem;
+}
+
+
+/** Landscape smartphone styles | Low resolution tablet styles **/
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Universal styles */
+    html {
+        font-size: 14px;
+    }
+
+    /* Navigation styles */
+    #navbar ul li a {
+        padding: 12.5px;
+    }
+
+    /* Welcome screen styles */
+    #welcome-section {
+        font-size: 1.55rem;
+    }
+
+    /* About me section styles */
+    .aboutBox {
+        padding: 7.5vw;
+    }
+
+    #myPicture {
+        float:none;
+        display: block;
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    /* Portfolio section styles */
+    .portfolioBox {
+        padding: 7.5vw;
+    }
+
+    .container .project-tile a img {
+        width: 40vw;
+        height: 25vh;
+    }
+
+    /* Contact section styles */
+    .contactBox {
+        padding: 7.5vw;
+    }
+
+    .contactBox #profile-link, .contactBox .logo {
+        margin: 1vh 1vw;
+    }
+
+    /* Footer styles */
+    footer {
+        padding: 1.25vh 0;
+    }
+}
+
+
+/** Portrait smartphone styles **/
+@media only screen and (max-width: 480px) {
+    /* Universal styles */
+    html {
+        font-size: 12px;
+    }
+
+    /* Navigation styles */
+    #navbar ul {
+        justify-content: space-around;
+    }
+
+    #navbar ul li a {
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    /* Welcome screen styles */
+    #welcome-section {
+        font-size: 1.35rem;
+    }
+
+    /* About me section styles */
+    .aboutBox {
+        padding: 10vw;
+    }
+
+    #myPicture {
+        float:none;
+        display: block;
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .aboutBox p {
+        text-align: center;
+    }
+
+    /* Portfolio section styles */
+    .portfolioBox {
+        padding: 10vw;
+    }
+
+    .container .project-tile a img {
+        width: 80vw;
+        height: 25vh;
+    }
+
+    .container #last-item {
+        display: none;
+    }
+
+    /* Contact section styles */
+    .contactBox {
+        padding: 10vw;
+    }
+
+    .contactBox #profile-link, .contactBox .logo {
+        padding: 7.5px;
+        margin: 1vh 1vw;
+    }
+
+    /* Footer styles */
+    footer {
+        padding: 1.5vh 0;
+    }
+}
